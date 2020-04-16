@@ -1,6 +1,7 @@
 # easypic
 EasyPIC: QT interface to generate assembly code for PIC16F devices
-Originally hosted at https://code.google.com/archive/p/easypic/
+
+_Originally hosted at https://code.google.com/archive/p/easypic/ _
 
 # Setup
 - Needs QT C++ SDK to build and compile
