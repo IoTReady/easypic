@@ -1,0 +1,9 @@
+<!DOCTYPE RCC><RCC version="1.0">
+ <qresource>
+     <file>images/binary.png</file>
+     <file>images/wrench.png</file>
+     <file>images/help.png</file>
+     <file>text/code_template.asm</file>
+     <file>text/help.html</file>
+ </qresource>
+ </RCC>

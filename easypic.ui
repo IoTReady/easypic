@@ -1,0 +1,1359 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <author>Tej Prakash</author>
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>640</width>
+    <height>640</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>640</width>
+    <height>620</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>640</width>
+    <height>16777215</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>EasyPIC - PIC10F200 Programmer</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QGridLayout" name="gridLayout_4">
+    <item row="0" column="0">
+     <widget class="QTabWidget" name="mainBox">
+      <property name="minimumSize">
+       <size>
+        <width>600</width>
+        <height>600</height>
+       </size>
+      </property>
+      <property name="tabShape">
+       <enum>QTabWidget::Rounded</enum>
+      </property>
+      <property name="currentIndex">
+       <number>0</number>
+      </property>
+      <widget class="QWidget" name="programPage">
+       <attribute name="icon">
+        <iconset>
+         <disabledoff>:/images/binary.png</disabledoff>
+        </iconset>
+       </attribute>
+       <attribute name="title">
+        <string>Program</string>
+       </attribute>
+       <layout class="QGridLayout" name="gridLayout_3">
+        <item row="0" column="0">
+         <widget class="QGroupBox" name="cGroupBox">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="minimumSize">
+           <size>
+            <width>200</width>
+            <height>80</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>200</width>
+            <height>80</height>
+           </size>
+          </property>
+          <property name="title">
+           <string>Counter Values in Decimal</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+          <property name="flat">
+           <bool>false</bool>
+          </property>
+          <property name="checkable">
+           <bool>false</bool>
+          </property>
+          <widget class="QLabel" name="rc_dec_label">
+           <property name="geometry">
+            <rect>
+             <x>0</x>
+             <y>20</y>
+             <width>100</width>
+             <height>20</height>
+            </rect>
+           </property>
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">color: rgb(255, 0, 0);</string>
+           </property>
+           <property name="frameShape">
+            <enum>QFrame::NoFrame</enum>
+           </property>
+           <property name="text">
+            <string>Reference Counter </string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+           </property>
+          </widget>
+          <widget class="QLabel" name="bc_dec_label">
+           <property name="geometry">
+            <rect>
+             <x>0</x>
+             <y>40</y>
+             <width>100</width>
+             <height>20</height>
+            </rect>
+           </property>
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">color: rgb(255, 0, 0);</string>
+           </property>
+           <property name="frameShape">
+            <enum>QFrame::NoFrame</enum>
+           </property>
+           <property name="text">
+            <string>B Counter </string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+           </property>
+          </widget>
+          <widget class="QLabel" name="ac_dec_label">
+           <property name="geometry">
+            <rect>
+             <x>0</x>
+             <y>60</y>
+             <width>100</width>
+             <height>20</height>
+            </rect>
+           </property>
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">color: rgb(255, 0, 0);</string>
+           </property>
+           <property name="frameShape">
+            <enum>QFrame::NoFrame</enum>
+           </property>
+           <property name="text">
+            <string>A Counter </string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+           </property>
+          </widget>
+         </widget>
+        </item>
+        <item row="2" column="0" colspan="3">
+         <widget class="QGroupBox" name="rGroupBox">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="minimumSize">
+           <size>
+            <width>600</width>
+            <height>100</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>600</width>
+            <height>100</height>
+           </size>
+          </property>
+          <property name="font">
+           <font>
+            <kerning>true</kerning>
+           </font>
+          </property>
+          <property name="title">
+           <string>Reference Counter Latch</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+          <widget class="QLabel" name="rLabel_rsvd">
+           <property name="geometry">
+            <rect>
+             <x>0</x>
+             <y>25</y>
+             <width>75</width>
+             <height>25</height>
+            </rect>
+           </property>
+           <property name="frameShape">
+            <enum>QFrame::StyledPanel</enum>
+           </property>
+           <property name="text">
+            <string>Reserved</string>
+           </property>
+           <property name="scaledContents">
+            <bool>true</bool>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignCenter</set>
+           </property>
+           <property name="wordWrap">
+            <bool>true</bool>
+           </property>
+          </widget>
+          <widget class="QLabel" name="rLabel_rc">
+           <property name="geometry">
+            <rect>
+             <x>200</x>
+             <y>25</y>
+             <width>350</width>
+             <height>25</height>
+            </rect>
+           </property>
+           <property name="frameShape">
+            <enum>QFrame::StyledPanel</enum>
+           </property>
+           <property name="text">
+            <string>14-Bit Reference Counter</string>
+           </property>
+           <property name="scaledContents">
+            <bool>true</bool>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignCenter</set>
+           </property>
+           <property name="wordWrap">
+            <bool>true</bool>
+           </property>
+           <property name="textInteractionFlags">
+            <set>Qt::NoTextInteraction</set>
+           </property>
+          </widget>
+          <widget class="QLabel" name="rLabel_abw">
+           <property name="geometry">
+            <rect>
+             <x>150</x>
+             <y>25</y>
+             <width>50</width>
+             <height>25</height>
+            </rect>
+           </property>
+           <property name="frameShape">
+            <enum>QFrame::StyledPanel</enum>
+           </property>
+           <property name="text">
+            <string>Anti-Bcklsh W</string>
+           </property>
+           <property name="scaledContents">
+            <bool>true</bool>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignCenter</set>
+           </property>
+           <property name="wordWrap">
+            <bool>true</bool>
+           </property>
+          </widget>
+          <widget class="QLabel" name="rLabel_tmb">
+           <property name="geometry">
+            <rect>
+             <x>100</x>
+             <y>25</y>
+             <width>50</width>
+             <height>25</height>
+            </rect>
+           </property>
+           <property name="frameShape">
+            <enum>QFrame::StyledPanel</enum>
+           </property>
+           <property name="text">
+            <string>Test Mode Bits</string>
+           </property>
+           <property name="scaledContents">
+            <bool>true</bool>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignCenter</set>
+           </property>
+           <property name="wordWrap">
+            <bool>true</bool>
+           </property>
+          </widget>
+          <widget class="QLabel" name="rLabel_cb">
+           <property name="geometry">
+            <rect>
+             <x>550</x>
+             <y>25</y>
+             <width>50</width>
+             <height>25</height>
+            </rect>
+           </property>
+           <property name="frameShape">
+            <enum>QFrame::StyledPanel</enum>
+           </property>
+           <property name="text">
+            <string>Control Bits</string>
+           </property>
+           <property name="scaledContents">
+            <bool>true</bool>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignCenter</set>
+           </property>
+           <property name="wordWrap">
+            <bool>true</bool>
+           </property>
+          </widget>
+          <widget class="QLabel" name="rLabel_ldp">
+           <property name="geometry">
+            <rect>
+             <x>75</x>
+             <y>25</y>
+             <width>25</width>
+             <height>25</height>
+            </rect>
+           </property>
+           <property name="frameShape">
+            <enum>QFrame::StyledPanel</enum>
+           </property>
+           <property name="text">
+            <string>LDP</string>
+           </property>
+           <property name="scaledContents">
+            <bool>true</bool>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignCenter</set>
+           </property>
+           <property name="wordWrap">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </widget>
+        </item>
+        <item row="3" column="0" colspan="3">
+         <widget class="QGroupBox" name="nGroupBox">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="minimumSize">
+           <size>
+            <width>600</width>
+            <height>100</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>600</width>
+            <height>100</height>
+           </size>
+          </property>
+          <property name="title">
+           <string>N Counter Latch</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+          <widget class="QLabel" name="nLabel_ac">
+           <property name="geometry">
+            <rect>
+             <x>400</x>
+             <y>25</y>
+             <width>150</width>
+             <height>25</height>
+            </rect>
+           </property>
+           <property name="frameShape">
+            <enum>QFrame::StyledPanel</enum>
+           </property>
+           <property name="text">
+            <string>6-Bit A Counter</string>
+           </property>
+           <property name="scaledContents">
+            <bool>true</bool>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignCenter</set>
+           </property>
+           <property name="wordWrap">
+            <bool>true</bool>
+           </property>
+           <property name="textInteractionFlags">
+            <set>Qt::NoTextInteraction</set>
+           </property>
+          </widget>
+          <widget class="QLabel" name="nLabel_cp">
+           <property name="geometry">
+            <rect>
+             <x>50</x>
+             <y>25</y>
+             <width>25</width>
+             <height>25</height>
+            </rect>
+           </property>
+           <property name="frameShape">
+            <enum>QFrame::StyledPanel</enum>
+           </property>
+           <property name="text">
+            <string>CP Gain</string>
+           </property>
+           <property name="scaledContents">
+            <bool>true</bool>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignCenter</set>
+           </property>
+           <property name="wordWrap">
+            <bool>true</bool>
+           </property>
+           <property name="textInteractionFlags">
+            <set>Qt::NoTextInteraction</set>
+           </property>
+          </widget>
+          <widget class="QLabel" name="nLabel_bc">
+           <property name="geometry">
+            <rect>
+             <x>75</x>
+             <y>25</y>
+             <width>325</width>
+             <height>25</height>
+            </rect>
+           </property>
+           <property name="frameShape">
+            <enum>QFrame::StyledPanel</enum>
+           </property>
+           <property name="text">
+            <string>13-Bit B Counter</string>
+           </property>
+           <property name="scaledContents">
+            <bool>true</bool>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignCenter</set>
+           </property>
+           <property name="wordWrap">
+            <bool>true</bool>
+           </property>
+          </widget>
+          <widget class="QLabel" name="nLabel_cb">
+           <property name="geometry">
+            <rect>
+             <x>550</x>
+             <y>25</y>
+             <width>50</width>
+             <height>25</height>
+            </rect>
+           </property>
+           <property name="frameShape">
+            <enum>QFrame::StyledPanel</enum>
+           </property>
+           <property name="text">
+            <string>Control Bits</string>
+           </property>
+           <property name="scaledContents">
+            <bool>true</bool>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignCenter</set>
+           </property>
+           <property name="wordWrap">
+            <bool>true</bool>
+           </property>
+          </widget>
+          <widget class="QLabel" name="nLabel_rsvd">
+           <property name="geometry">
+            <rect>
+             <x>0</x>
+             <y>25</y>
+             <width>50</width>
+             <height>25</height>
+            </rect>
+           </property>
+           <property name="frameShape">
+            <enum>QFrame::StyledPanel</enum>
+           </property>
+           <property name="text">
+            <string>Reserved</string>
+           </property>
+           <property name="scaledContents">
+            <bool>true</bool>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignCenter</set>
+           </property>
+           <property name="wordWrap">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </widget>
+        </item>
+        <item row="4" column="0" colspan="3">
+         <widget class="QGroupBox" name="fGroupBox">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="minimumSize">
+           <size>
+            <width>600</width>
+            <height>100</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>600</width>
+            <height>100</height>
+           </size>
+          </property>
+          <property name="title">
+           <string>Function Latch</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+          <widget class="QLabel" name="fLabel_psv">
+           <property name="geometry">
+            <rect>
+             <x>0</x>
+             <y>25</y>
+             <width>50</width>
+             <height>25</height>
+            </rect>
+           </property>
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="frameShape">
+            <enum>QFrame::StyledPanel</enum>
+           </property>
+           <property name="text">
+            <string>Prescaler Value</string>
+           </property>
+           <property name="scaledContents">
+            <bool>true</bool>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignCenter</set>
+           </property>
+           <property name="wordWrap">
+            <bool>true</bool>
+           </property>
+          </widget>
+          <widget class="QLabel" name="fLabel_pd2">
+           <property name="geometry">
+            <rect>
+             <x>50</x>
+             <y>25</y>
+             <width>25</width>
+             <height>25</height>
+            </rect>
+           </property>
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="frameShape">
+            <enum>QFrame::StyledPanel</enum>
+           </property>
+           <property name="text">
+            <string>Pwr Dn2</string>
+           </property>
+           <property name="scaledContents">
+            <bool>true</bool>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignCenter</set>
+           </property>
+           <property name="wordWrap">
+            <bool>true</bool>
+           </property>
+           <property name="textInteractionFlags">
+            <set>Qt::NoTextInteraction</set>
+           </property>
+          </widget>
+          <widget class="QLabel" name="fLabel_cs2">
+           <property name="geometry">
+            <rect>
+             <x>75</x>
+             <y>25</y>
+             <width>75</width>
+             <height>25</height>
+            </rect>
+           </property>
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="frameShape">
+            <enum>QFrame::StyledPanel</enum>
+           </property>
+           <property name="text">
+            <string>Current Setting 2</string>
+           </property>
+           <property name="scaledContents">
+            <bool>true</bool>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignCenter</set>
+           </property>
+           <property name="wordWrap">
+            <bool>true</bool>
+           </property>
+          </widget>
+          <widget class="QLabel" name="fLabel_cs1">
+           <property name="geometry">
+            <rect>
+             <x>150</x>
+             <y>25</y>
+             <width>75</width>
+             <height>25</height>
+            </rect>
+           </property>
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="frameShape">
+            <enum>QFrame::StyledPanel</enum>
+           </property>
+           <property name="text">
+            <string>Current Setting 1</string>
+           </property>
+           <property name="scaledContents">
+            <bool>true</bool>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignCenter</set>
+           </property>
+           <property name="wordWrap">
+            <bool>true</bool>
+           </property>
+          </widget>
+          <widget class="QLabel" name="fLabel_tcc">
+           <property name="geometry">
+            <rect>
+             <x>225</x>
+             <y>25</y>
+             <width>100</width>
+             <height>25</height>
+            </rect>
+           </property>
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="frameShape">
+            <enum>QFrame::StyledPanel</enum>
+           </property>
+           <property name="text">
+            <string>Timer Counter Control</string>
+           </property>
+           <property name="scaledContents">
+            <bool>true</bool>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignCenter</set>
+           </property>
+           <property name="wordWrap">
+            <bool>true</bool>
+           </property>
+          </widget>
+          <widget class="QLabel" name="fLabel_flm">
+           <property name="geometry">
+            <rect>
+             <x>325</x>
+             <y>25</y>
+             <width>25</width>
+             <height>25</height>
+            </rect>
+           </property>
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="frameShape">
+            <enum>QFrame::StyledPanel</enum>
+           </property>
+           <property name="text">
+            <string>FLM</string>
+           </property>
+           <property name="scaledContents">
+            <bool>true</bool>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignCenter</set>
+           </property>
+           <property name="wordWrap">
+            <bool>true</bool>
+           </property>
+           <property name="textInteractionFlags">
+            <set>Qt::NoTextInteraction</set>
+           </property>
+          </widget>
+          <widget class="QLabel" name="fLabel_fle">
+           <property name="geometry">
+            <rect>
+             <x>350</x>
+             <y>25</y>
+             <width>25</width>
+             <height>25</height>
+            </rect>
+           </property>
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="frameShape">
+            <enum>QFrame::StyledPanel</enum>
+           </property>
+           <property name="text">
+            <string>FLE</string>
+           </property>
+           <property name="scaledContents">
+            <bool>true</bool>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignCenter</set>
+           </property>
+           <property name="wordWrap">
+            <bool>true</bool>
+           </property>
+           <property name="textInteractionFlags">
+            <set>Qt::NoTextInteraction</set>
+           </property>
+          </widget>
+          <widget class="QLabel" name="fLabel_cp">
+           <property name="geometry">
+            <rect>
+             <x>375</x>
+             <y>25</y>
+             <width>25</width>
+             <height>25</height>
+            </rect>
+           </property>
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="frameShape">
+            <enum>QFrame::StyledPanel</enum>
+           </property>
+           <property name="text">
+            <string>CP 3-S</string>
+           </property>
+           <property name="scaledContents">
+            <bool>true</bool>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignCenter</set>
+           </property>
+           <property name="wordWrap">
+            <bool>true</bool>
+           </property>
+           <property name="textInteractionFlags">
+            <set>Qt::NoTextInteraction</set>
+           </property>
+          </widget>
+          <widget class="QLabel" name="fLabel_pdp">
+           <property name="geometry">
+            <rect>
+             <x>400</x>
+             <y>25</y>
+             <width>25</width>
+             <height>25</height>
+            </rect>
+           </property>
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="frameShape">
+            <enum>QFrame::StyledPanel</enum>
+           </property>
+           <property name="text">
+            <string>PDP</string>
+           </property>
+           <property name="scaledContents">
+            <bool>true</bool>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignCenter</set>
+           </property>
+           <property name="wordWrap">
+            <bool>true</bool>
+           </property>
+           <property name="textInteractionFlags">
+            <set>Qt::NoTextInteraction</set>
+           </property>
+          </widget>
+          <widget class="QLabel" name="fLabel_mc">
+           <property name="geometry">
+            <rect>
+             <x>425</x>
+             <y>25</y>
+             <width>75</width>
+             <height>25</height>
+            </rect>
+           </property>
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="frameShape">
+            <enum>QFrame::StyledPanel</enum>
+           </property>
+           <property name="text">
+            <string>MuxOut
+Control</string>
+           </property>
+           <property name="scaledContents">
+            <bool>true</bool>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignCenter</set>
+           </property>
+           <property name="wordWrap">
+            <bool>true</bool>
+           </property>
+          </widget>
+          <widget class="QLabel" name="fLabel_pd1">
+           <property name="geometry">
+            <rect>
+             <x>500</x>
+             <y>25</y>
+             <width>25</width>
+             <height>25</height>
+            </rect>
+           </property>
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="frameShape">
+            <enum>QFrame::StyledPanel</enum>
+           </property>
+           <property name="text">
+            <string>Pwr Dn1</string>
+           </property>
+           <property name="scaledContents">
+            <bool>true</bool>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignCenter</set>
+           </property>
+           <property name="wordWrap">
+            <bool>true</bool>
+           </property>
+           <property name="textInteractionFlags">
+            <set>Qt::NoTextInteraction</set>
+           </property>
+          </widget>
+          <widget class="QLabel" name="fLabel_cr">
+           <property name="geometry">
+            <rect>
+             <x>525</x>
+             <y>25</y>
+             <width>25</width>
+             <height>25</height>
+            </rect>
+           </property>
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="frameShape">
+            <enum>QFrame::StyledPanel</enum>
+           </property>
+           <property name="text">
+            <string>Cntr Rst</string>
+           </property>
+           <property name="scaledContents">
+            <bool>true</bool>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignCenter</set>
+           </property>
+           <property name="wordWrap">
+            <bool>true</bool>
+           </property>
+           <property name="textInteractionFlags">
+            <set>Qt::NoTextInteraction</set>
+           </property>
+          </widget>
+          <widget class="QLabel" name="fLabel_cb">
+           <property name="geometry">
+            <rect>
+             <x>550</x>
+             <y>25</y>
+             <width>50</width>
+             <height>25</height>
+            </rect>
+           </property>
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="frameShape">
+            <enum>QFrame::StyledPanel</enum>
+           </property>
+           <property name="text">
+            <string>Control Bits</string>
+           </property>
+           <property name="scaledContents">
+            <bool>true</bool>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignCenter</set>
+           </property>
+           <property name="wordWrap">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </widget>
+        </item>
+        <item row="5" column="0" rowspan="3" colspan="2">
+         <widget class="QTextBrowser" name="codeBrowser">
+          <property name="cursor" stdset="0">
+           <cursorShape>IBeamCursor</cursorShape>
+          </property>
+          <property name="toolTip">
+           <string>Displays the generated assembly code.</string>
+          </property>
+          <property name="frameShadow">
+           <enum>QFrame::Plain</enum>
+          </property>
+          <property name="documentTitle">
+           <string>PIC10F200 Assembly Code</string>
+          </property>
+          <property name="readOnly">
+           <bool>true</bool>
+          </property>
+          <property name="acceptRichText">
+           <bool>false</bool>
+          </property>
+          <property name="textInteractionFlags">
+           <set>Qt::TextBrowserInteraction</set>
+          </property>
+         </widget>
+        </item>
+        <item row="5" column="2">
+         <widget class="QPushButton" name="submitButton">
+          <property name="font">
+           <font>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="toolTip">
+           <string>Generates assembly code suitable for compilation with the MPASM assembler provided by Microchip.</string>
+          </property>
+          <property name="text">
+           <string>Generate Code</string>
+          </property>
+         </widget>
+        </item>
+        <item row="6" column="2">
+         <widget class="QPushButton" name="saveButton">
+          <property name="toolTip">
+           <string>Save Assembly Code (.asm)</string>
+          </property>
+          <property name="text">
+           <string>Save Code</string>
+          </property>
+          <property name="shortcut">
+           <string>Ctrl+S</string>
+          </property>
+         </widget>
+        </item>
+        <item row="7" column="2">
+         <widget class="QPushButton" name="buildButton">
+          <property name="toolTip">
+           <string>Generates a Hex file ready to upload into the PIC. 
+Only available if the path to the assembler has been chosen in the Settings window.</string>
+          </property>
+          <property name="text">
+           <string>Save Code and 
+ Build Hex File</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="2">
+         <widget class="QGroupBox" name="progChoiceBox">
+          <property name="minimumSize">
+           <size>
+            <width>200</width>
+            <height>80</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>200</width>
+            <height>80</height>
+           </size>
+          </property>
+          <property name="title">
+           <string>PLL Programming Method</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+          <widget class="QSlider" name="progMethodSlider">
+           <property name="geometry">
+            <rect>
+             <x>10</x>
+             <y>25</y>
+             <width>20</width>
+             <height>40</height>
+            </rect>
+           </property>
+           <property name="maximum">
+            <number>1</number>
+           </property>
+           <property name="pageStep">
+            <number>1</number>
+           </property>
+           <property name="value">
+            <number>1</number>
+           </property>
+           <property name="orientation">
+            <enum>Qt::Vertical</enum>
+           </property>
+           <property name="invertedAppearance">
+            <bool>false</bool>
+           </property>
+           <property name="tickPosition">
+            <enum>QSlider::NoTicks</enum>
+           </property>
+          </widget>
+          <widget class="QLabel" name="label">
+           <property name="geometry">
+            <rect>
+             <x>40</x>
+             <y>20</y>
+             <width>150</width>
+             <height>20</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>Initialisation Latch Method</string>
+           </property>
+          </widget>
+          <widget class="QLabel" name="label_2">
+           <property name="geometry">
+            <rect>
+             <x>40</x>
+             <y>50</y>
+             <width>150</width>
+             <height>20</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>Counter Reset Method</string>
+           </property>
+          </widget>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="settingsPage">
+       <property name="whatsThis">
+        <string>Settings</string>
+       </property>
+       <property name="accessibleName">
+        <string>Settings</string>
+       </property>
+       <attribute name="icon">
+        <iconset>
+         <disabledoff>:/images/wrench.png</disabledoff>
+        </iconset>
+       </attribute>
+       <attribute name="title">
+        <string>Settings</string>
+       </attribute>
+       <layout class="QGridLayout" name="gridLayout">
+        <item row="0" column="0">
+         <layout class="QVBoxLayout" name="verticalLayout">
+          <item>
+           <widget class="QCheckBox" name="wdtCheck">
+            <property name="text">
+             <string>Watchdog Timer</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QCheckBox" name="mclrCheck">
+            <property name="text">
+             <string>Master Clear</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QCheckBox" name="cpCheck">
+            <property name="text">
+             <string>Code Protection</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QCheckBox" name="gp2Check">
+            <property name="text">
+             <string>Oscillator/4 onto GP2</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item row="0" column="1">
+         <layout class="QVBoxLayout" name="verticalLayout_2">
+          <item>
+           <widget class="QPushButton" name="defaultsButton">
+            <property name="enabled">
+             <bool>false</bool>
+            </property>
+            <property name="text">
+             <string>Reset to Defaults</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="svsettingsButton">
+            <property name="enabled">
+             <bool>false</bool>
+            </property>
+            <property name="text">
+             <string>Save Settings</string>
+            </property>
+            <property name="shortcut">
+             <string>Ctrl+S</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item row="1" column="0" colspan="2">
+         <layout class="QFormLayout" name="formLayout">
+          <item row="1" column="0" colspan="2">
+           <widget class="QLineEdit" name="asmblrPathLine">
+            <property name="toolTip">
+             <string>Select Microchip Assembler. Typically:
+C:\Program Files (x86)\Microchip\MPASM Suite\MPASMWIN.exe OR 
+C:\Program Files\Microchip\MPASM Suite\MPASMWIN.exe</string>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+           </widget>
+          </item>
+          <item row="4" column="0">
+           <widget class="QLabel" name="buildOptionslabel">
+            <property name="text">
+             <string>Build options:</string>
+            </property>
+           </widget>
+          </item>
+          <item row="4" column="1">
+           <widget class="QLineEdit" name="buildOptionsLine">
+            <property name="toolTip">
+             <string>These are sane options, for information look at the MPASM help file.</string>
+            </property>
+            <property name="text">
+             <string>/e- /o- /l- /w0</string>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="0" colspan="2">
+           <widget class="QPushButton" name="asmblrButton">
+            <property name="toolTip">
+             <string>Browse to assembler</string>
+            </property>
+            <property name="text">
+             <string>Select Assembler</string>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="0">
+           <spacer name="verticalSpacer">
+            <property name="orientation">
+             <enum>Qt::Vertical</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>20</width>
+              <height>40</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item row="3" column="0">
+           <spacer name="verticalSpacer_2">
+            <property name="orientation">
+             <enum>Qt::Vertical</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>20</width>
+              <height>40</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="helpPage">
+       <attribute name="icon">
+        <iconset>
+         <disabledoff>:/images/help.png</disabledoff>
+        </iconset>
+       </attribute>
+       <attribute name="title">
+        <string>Help</string>
+       </attribute>
+       <layout class="QGridLayout" name="gridLayout_2">
+        <item row="0" column="0" colspan="2">
+         <widget class="QTextBrowser" name="helpBrowser">
+          <property name="font">
+           <font>
+            <family>Liberation Sans</family>
+            <pointsize>10</pointsize>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string/>
+          </property>
+          <property name="frameShadow">
+           <enum>QFrame::Raised</enum>
+          </property>
+          <property name="documentTitle">
+           <string/>
+          </property>
+          <property name="source">
+           <url>
+            <string>qrc:/text/help.html</string>
+           </url>
+          </property>
+          <property name="searchPaths">
+           <stringlist>
+            <string>&quot;:/text/&quot;</string>
+           </stringlist>
+          </property>
+          <property name="openExternalLinks">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="0">
+         <widget class="QPushButton" name="usageButton">
+          <property name="text">
+           <string>View Usage</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="1">
+         <widget class="QPushButton" name="templateButton">
+          <property name="text">
+           <string>View Code Template</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="actionAbout">
+   <property name="text">
+    <string>About</string>
+   </property>
+  </action>
+  <action name="actionUsage">
+   <property name="text">
+    <string>Usage</string>
+   </property>
+  </action>
+  <action name="actionSaveSettings">
+   <property name="text">
+    <string>Save Settings</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>usageButton</sender>
+   <signal>clicked()</signal>
+   <receiver>helpBrowser</receiver>
+   <slot>home()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>167</x>
+     <y>588</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>318</x>
+     <y>306</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>
