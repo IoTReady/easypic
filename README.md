@@ -6,3 +6,6 @@ EasyPIC: QT interface to generate assembly code for PIC16F devices
 - Last compiled and tested on 15/04/2010
 
 # Screenshots
+![Main](https://github.com/IoTReady/easypic/raw/master/screenshots/main.JPG)
+![Settings](https://github.com/IoTReady/easypic/raw/master/screenshots/settings.JPG)
+![Help](https://github.com/IoTReady/easypic/raw/master/screenshots/help.JPG)
